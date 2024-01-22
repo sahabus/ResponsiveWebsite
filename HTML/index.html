@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Saha Restuarant</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<nav id="header-nav" class="navbar navbar-default"> <!--bootstrap class navbar and subclass navbar-default(means default navbar will be added) to add navigation bar-->
+			<div class="container"> <!--container changes its width based on the browser and container-fluid also available-->
+				<div class="navbar-header"> <!-- wrapper class -->
+					<a href="index.html" class="pull-left visible-md visible-lg"> <!--pull left(loat left) will not let the print the line in next line and pull it to left in bootstrap-->
+						<!-- inorder to have the logo disapper when the screen size goes small then we use visible class-->
+					   <div id="logo-img" alt="logo image"></div>
+				    </a>
+                
+                   <div class="navbar-brand"> <!-- any branding like name and logo should go under navbar-brand class in bootstrap-->
+                	  <a href="index.html"><h1>Saha Restuarant</h1></a> <!--putting name inside a href so that it would be clickable-->
+                	  <p>
+                		  <img src="halal.png" alt="halal Certified" width="30px" height="30px">
+                		  <span>Halal Certified</span>
+                	  </p>
+                   </div> <!--navbar brand-->
+                     <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false"> <!-- class navbar-toggle is gonna the controll all the positioning of this whole button, collased class is not it bootsrap but this will signifying the bootsrap is plugin that this button is in collpased which means nobody click on it this class will go away --> <!--#collapsable-nav is class name we made going to be an id of navbar below and do all the menus-->
+                     	<span class="sr-only">Toggle navigation</span> <!-- sr means screen reader which will not show in browser -->
+                     	<span class="icon-bar"></span> <!-- horizontal line inside button-->
+                     	<span class="icon-bar"></span>
+                     	<span class="icon-bar"></span>
+                     </button>
+               </div> <!-- navbar-header-->
+               
+               <div id="collapsable-nav" class="collapse navbar-collapse"> <!--id collapsable-nav which we select on the above div using # sign-->
+                  <ul id="nav-list" class="nav navbar-nav navbar-right"> <!-- nav and navbar-nav is basically saying i am going to be component of our navigation bar, navbar-right similar to pull-left and pull-right which means i want it to be right -->
+                   <li class="visible-xs active">
+                      <a href="index.html">
+                        <span class="glyphicon glyphicon-home"></span> Home</a>
+                   </li>
+                   <li>
+                     <a href="menu-categories.html"> <!--going to point to menu page so its in href-->
+                     <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Menu</a> <!--glypicon class means the icons for word--> <!--break between actual icon and menu with class hidden-xs means want to have break go away when the screen size is extra small-->
+                   </li>
+                   <li>
+                     <a href="#footer">
+                     <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> About</a> <!-- can get the glypicon from getbootsrap.com-->
+                   </li>
+                   <li>
+                     <a href="Register.html">
+                     <span class="glyphicon glyphicon-user"></span><br class="hidden-xs"> Register</a>
+                   </li>
+                   <li id="phone" class="hidden-xs"> <!-- hidden-xs, if the screen size is small, then phone number needs to be hided-->
+                     <a href="tel:88386 08131"> <!--tel: phone number will try to do call when user click on it-->
+                     <span>88386 08131</span></a><div>*We Deliver</div>
+                   </li>
+                  </ul><!-- #nav-list -->
+               </div><!-- .collapse .navbar-collapse -->
+			</div> <!--container div-->
+		</nav><!--header-nav-->
+	</header>
+
+
+     <div id="call-btn" class="visible-xs">
+    <a class="btn" href="tel:410-602-5008">
+    <span class="glyphicon glyphicon-earphone"></span>
+    88386 08131
+    </a>
+  </div>
+  <div id="xs-deliver" class="text-center visible-xs">* We Deliver</div>
+
+  <div id="main-content" class="container"> <!-- main content if is created by us -->
+    <div class="jumbotron"> <!-- Jumbotron means main page -->
+      <img src="images/pic_2.jpg" width="600px" height="500px" alt="Picture of restaurant" class="img-responsive visible-xs"> <!-- img-responsive from the bootstrap says as i change the width of the browsers, the width and sizing of the image is going to change proportionally -->
+    </div>
+     
+     <div id="home-tiles" class="row">
+       <div class="col-md-4 col-sm-6 col-xs-12"> <!-- if it medium screen then the tile should take 12/4= 3 part of the screen and if its small screen it should take 2 part of screen and its xs 12(the whole screen) -->
+        <a href="menu-categories.html"><div id="menu-tile"><span>menu</span></div></a>
+       </div>
+       <div class="col-md-4 col-sm-6 col-xs-12">
+        <a href="single-category.html"><div id="specials-tile"><span>specials</span></div></a>
+       </div>
+       <div class="col-md-4 col-sm-12 col-xs-12">
+        <a href="https://goo.gl/maps/RK3pf3t2Tf497Whr8" target="_blank"> <!-- target _blank will open the link in a seperate tab(new tab)-->
+          <div id="map-tile">
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31336.36153138106!2d79.36090034565397!3d10.959959008794408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5532b346577e97%3A0x6968b1c46804c5!2sAlif%20Restaurant!5e0!3m2!1sen!2sin!4v1694185892018!5m2!1sen!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> <!-- adjust the width nd height according to the tile size which we gave in css -->
+           <span>map</span>
+          </div>
+        </a>
+       </div>
+
+     </div> <!-- end home-tiles -->
+
+  </div> <!-- end main content -->
+   
+  <section id="footer">
+   <footer class="panel-footer"> <!-- pannel footer class has some basic padding and margin in the background so using this class -->
+    <div class="container"> 
+      <div class="row">
+        <section id="hours" class="col-sm-4">
+          <span>Hours:</span><br> 
+          Sun-Thurs: 11:15am - 10:00pm<br>
+          Fri: 11:15am - 2:30pm<br>
+          Saturday Closed
+          <hr class="visible-xs"> <!-- hr mean horisontal row(horizonta line b/w two sectionns -->
+        </section>
+        <section id="address" class="col-sm-4">
+          <span>Address:</span><br>
+          Ayeekulam Road<br>
+          Kumbakonam, TN 612 001
+          <p>* Delivery area within 3-4 miles, with minimum order of Rs.200 plus Rs.30 charge for all deliveries.</p>
+          <hr class="visible-xs">
+        </section>
+        <section id="testimonials" class="col-sm-4">
+          <p>"The best Chinese restaurant I've been to! And that's saying a lot, since I've been to many!"</p>
+          <p>"Amazing food! Great service! Couldn't ask for more! I'll be back again and again!"</p>
+        </section>
+      </div>
+      <div class="text-center">&copy; Copyright Alif Restuarant 2016</div>
+    </div>
+  </footer>
+</section>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
